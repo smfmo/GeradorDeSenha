@@ -1,10 +1,10 @@
-function generatePassword(length = 12){
-    const charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+[]{}|;:,.<>?/';
-    let password = '';
+function gerarSenha(length = 12){
+    const letrasAleatorias = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345678';
+    let senha = '';
 
     for(let i = 0; i < length; i++){
-        const randomIndex = Math.floor(Math.random() * charset.length);
-        password += charset[randomIndex];
+        const gerador = Math.floor(Math.random() * letrasAleatorias.length);
+        senha += letrasAleatorias[gerador];
     }
-    document.getElementById('password').textContent = password;
+    document.getElementById('senha').textContent = senha;
 }
